@@ -1,29 +1,27 @@
-import React, { useState } from 'react';
-import './App.css';
-import Person from './Person/Person';
+import React, { useState } from "react";
+import "./App.css";
+import Person from "./Person/Person";
 
-const app = props => {
+const app = (props) => {
   const [personsState, setPersonsState] = useState({
     persons: [
-      { name: 'ashish', age: 25 },
-      { name: 'prince', age: 24 },
-      { name: 'Shubham', age: 20 }
-    ]
+      { name: "ashish", age: 25 },
+      { name: "prince", age: 24 },
+      { name: "Shubham", age: 20 },
+    ],
   });
 
-  const [otherState, setOtherState] = useState('some other value');
+  const [otherState, setOtherState] = useState("some other value");
 
   console.log(personsState, otherState);
 
   const switchNameHandler = () => {
-    // console.log('Was clicked!');
-    // DON'T DO THIS: this.state.persons[0].name = 'Maximilian';
     setPersonsState({
       persons: [
-        { name: 'ashish pandey', age: 26 },
-        { name: 'prince Dubey', age: 25 },
-        { name: 'Shubham pandey', age: 21}
-      ]
+        { name: "ashish pandey", age: 26 },
+        { name: "prince Dubey", age: 25 },
+        { name: "Shubham pandey", age: 21 },
+      ],
     });
   };
 
@@ -32,7 +30,9 @@ const app = props => {
       <h1>Hi, I'm a React App</h1>
       <p>This is really working!</p>
       <button onClick={switchNameHandler}>Switch Name</button>
+
       <Person
+        click={this.switchNameHandler}
         name={personsState.persons[0].name}
         age={personsState.persons[0].age}
       />
