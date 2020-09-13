@@ -32,7 +32,7 @@ const app = (props) => {
       <button onClick={switchNameHandler}>Switch Name</button>
 
       <Person
-        click={this.switchNameHandler}
+        click={switchNameHandler}
         name={personsState.persons[0].name}
         age={personsState.persons[0].age}
       />
