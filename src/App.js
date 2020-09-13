@@ -5,9 +5,9 @@ import Person from './Person/Person';
 const app = props => {
   const [personsState, setPersonsState] = useState({
     persons: [
-      { name: 'Max', age: 28 },
-      { name: 'Manu', age: 29 },
-      { name: 'Stephanie', age: 26 }
+      { name: 'ashish', age: 25 },
+      { name: 'prince', age: 24 },
+      { name: 'Shubham', age: 20 }
     ]
   });
 
@@ -20,9 +20,9 @@ const app = props => {
     // DON'T DO THIS: this.state.persons[0].name = 'Maximilian';
     setPersonsState({
       persons: [
-        { name: 'Maximilian', age: 28 },
-        { name: 'Manu', age: 29 },
-        { name: 'Stephanie', age: 27 }
+        { name: 'ashish pandey', age: 26 },
+        { name: 'prince Dubey', age: 25 },
+        { name: 'Shubham pandey', age: 21}
       ]
     });
   };
